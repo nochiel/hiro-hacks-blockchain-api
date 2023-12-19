@@ -1,0 +1,398 @@
+[
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Add Milestones to Proposal",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.milestones",
+        "method": "add-milestones-to-proposal"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Add Proposal to Vote",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.proposal-voting",
+        "method": "add-proposal"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Bootstrap DAO",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.bootstrap",
+        "method": "bootsrap"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Burn Membership Token",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.membership-token",
+        "method": "burn"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Callback Proposal Submission",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.proposal-submission",
+        "method": "callback"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Conclude Vote",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.proposal-voting",
+        "method": "callback"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Complete Milestone",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.milestones",
+        "method": "set-completed-milestone"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Conclude Vote",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.proposal-voting",
+        "method": "conclude"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Construct DAO",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.core",
+        "method": "construct"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Execute Proposal",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.core",
+        "method": "execute"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Set Extension",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.core",
+        "method": "set-extension"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Callback Grant Proposal",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.grant-proposal",
+        "method": "callback"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Execute Grant Proposal",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.grant-proposal",
+        "method": "execute"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Initial Token Allocation",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.initial-token-allocation",
+        "method": "execute"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Mint Membership Token",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.membership-token",
+        "method": "mint"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Pay for Milestone",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.milestones",
+        "method": "pay-for-milestone"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "New Grant Proposal",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.proposal-submission",
+        "method": "propose"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+},
+{
+  "chain": "stacks",
+  "uuid": "1",
+  "name": "Vote",
+  "version": 1,
+  "networks": {
+    "testnet": {
+      "if_this": {
+        "scope": "contract_call",
+        "contract_identifier": "ST2CFXXYE1FGPTKFN42Q9FT7G83M80DG5S50KPEVK.proposal-voting",
+        "method": "vote"
+      },
+      "then_that": {
+        "http_post": {
+          "url": "https://process.env.SERVER/api/events",
+          "authorization_header": "Bearer 12345"
+        }
+      },
+      "start_block": 138772
+    }
+  }
+}
+]
