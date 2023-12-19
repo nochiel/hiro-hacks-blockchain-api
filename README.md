@@ -1,31 +1,6 @@
-# Example Server for parsing Chainhook `payload` data
+# Hiro Hacks: Build a Custom Blockchain API
 
-```typescript
-const express = require("express");
-const app = express();
-app.use(express.json());
+This repository contains a submission for the Hiro Hacks [Build a Custom Blockchain API](https://docs.hiro.so/hacks/build-a-custom-api-using-chainhook) challenges.
 
-app.post("/api/events", async (req, res) => {
-  const events = req.body;
-  // Loop through each item in the apply array
-  events.apply.forEach((item: any) => {
-    // Loop through each transaction in the item
-    item.transactions.forEach((transaction: any) => {
-      // If the transaction has operations, loop through them
-      if (transaction.operations) {
-        transaction.operations.forEach((operation: any) => {
-          // Log the operation
-          console.log({ operation });
-        });
-      }
-    });
-  });
-
-  // Send a response back to Chainhook to acknowledge receipt of the event
-  res.status(200).send({ message: "Event triggered!" });
-});
-
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
-```
+[Stacks chainhooks](https://docs.hiro.so/chainhook/guides/chainhooks-with-stacks) are contained in src/predicates.json
+These chainhooks report events for the contracts in <https://github.com/nochiel/hiro-hacks-dao>.
